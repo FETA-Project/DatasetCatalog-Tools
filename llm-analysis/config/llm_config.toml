@@ -1,0 +1,32 @@
+url = "http://localhost:11434/api/generate"
+model_name = "deepseek-r1"
+embedding_base_url = "http://localhost:11434/api/embedding"
+embedding_model_name = "nomic-embed-text"
+embedding_document_prefix = "search_document:"
+embedding_query_prefix = "search_query:"
+# max timeout in seconds
+timeout = 1000
+max_retries = 20
+think_section_delimiter = ""
+
+[[substitution_rules]]
+regex = "ﬃ"
+replace_with = "ffi"
+
+[[substitution_rules]]
+regex = "ﬁ"
+replace_with = "fi"
+
+[[substitution_rules]]
+regex = "\n<\\|end-output\\|>.*"
+replace_with = ""
+
+[model_options]
+#top_k = 20
+#top_p = 0.5
+#min_p = 0.5
+#typical_p = 0.4
+#temperature = 0.3
+#repeat_penalty = 1.2
+#presence_penalty = 0.4
+#frequency_penalty = 0.5

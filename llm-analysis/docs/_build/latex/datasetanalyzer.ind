@@ -1,0 +1,133 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{add\_interval()}\spxextra{interval\_blacklist.IntervalBlacklist method}, 
+		\hyperpage{5}
+  \item \spxentry{add\_prefixes\_to\_chunks()}\spxextra{in module vector\_database}, \hyperpage{12}
+  \item \spxentry{aggregate\_reference\_analysis()}\spxextra{in module reference\_analysis\_aggregation}, 
+		\hyperpage{9}
+  \item \spxentry{analyze\_paper\_llm()}\spxextra{in module direct\_analysis}, \hyperpage{3}
+  \item \spxentry{analyze\_reference()}\spxextra{in module reference\_analysis}, \hyperpage{7}
+  \item \spxentry{analyze\_references()}\spxextra{in module reference\_analysis}, \hyperpage{7}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{concatenate\_field()}\spxextra{in module reference\_analysis\_aggregation}, 
+		\hyperpage{9}
+  \item \spxentry{constants}
+    \subitem \spxentry{module}, \hyperpage{3}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{direct\_analysis}
+    \subitem \spxentry{module}, \hyperpage{3}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{extract\_answer()}\spxextra{in module llm\_utils}, \hyperpage{5}
+  \item \spxentry{extract\_doi\_from\_url()}\spxextra{in module general\_utils}, \hyperpage{4}
+  \item \spxentry{extract\_number\_from\_reference\_identifier()}\spxextra{in module reference\_analysis}, 
+		\hyperpage{8}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{find\_citation\_number()}\spxextra{in module reference\_analysis}, \hyperpage{8}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{general\_utils}
+    \subitem \spxentry{module}, \hyperpage{4}
+  \item \spxentry{get\_expanded\_chunks()}\spxextra{vector\_database.VectorDatabase method}, 
+		\hyperpage{11}
+  \item \spxentry{get\_prepared\_context()}\spxextra{vector\_database.VectorDatabase method}, 
+		\hyperpage{11}
+  \item \spxentry{get\_relevant\_chunks()}\spxextra{vector\_database.VectorDatabase method}, 
+		\hyperpage{11}
+  \item \spxentry{get\_section()}\spxextra{in module direct\_analysis}, \hyperpage{3}
+  \item \spxentry{get\_sections\_by\_reference\_number\_or\_title()}\spxextra{in module reference\_analysis}, 
+		\hyperpage{8}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{identifier\_to\_number\_set()}\spxextra{in module reference\_analysis}, 
+		\hyperpage{8}
+  \item \spxentry{interval\_blacklist}
+    \subitem \spxentry{module}, \hyperpage{4}
+  \item \spxentry{IntervalBlacklist}\spxextra{class in interval\_blacklist}, \hyperpage{4}
+  \item \spxentry{is\_blacklisted()}\spxextra{interval\_blacklist.IntervalBlacklist method}, 
+		\hyperpage{5}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{llm\_query()}\spxextra{in module llm\_utils}, \hyperpage{5}
+  \item \spxentry{llm\_utils}
+    \subitem \spxentry{module}, \hyperpage{5}
+  \item \spxentry{logging\_utils}
+    \subitem \spxentry{module}, \hyperpage{6}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{merge\_analyses()}\spxextra{in module general\_utils}, \hyperpage{4}
+  \item \spxentry{module}
+    \subitem \spxentry{constants}, \hyperpage{3}
+    \subitem \spxentry{direct\_analysis}, \hyperpage{3}
+    \subitem \spxentry{general\_utils}, \hyperpage{4}
+    \subitem \spxentry{interval\_blacklist}, \hyperpage{4}
+    \subitem \spxentry{llm\_utils}, \hyperpage{5}
+    \subitem \spxentry{logging\_utils}, \hyperpage{6}
+    \subitem \spxentry{pdf\_utils}, \hyperpage{6}
+    \subitem \spxentry{reference\_analysis}, \hyperpage{7}
+    \subitem \spxentry{reference\_analysis\_aggregation}, \hyperpage{9}
+    \subitem \spxentry{toml\_report\_utils}, \hyperpage{10}
+    \subitem \spxentry{vector\_database}, \hyperpage{11}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{normalize\_text()}\spxextra{in module reference\_analysis}, \hyperpage{9}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{pdf\_utils}
+    \subitem \spxentry{module}, \hyperpage{6}
+  \item \spxentry{post\_with\_retries()}\spxextra{in module llm\_utils}, \hyperpage{5}
+  \item \spxentry{postprocess\_report()}\spxextra{in module toml\_report\_utils}, \hyperpage{10}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{read\_pdf()}\spxextra{in module pdf\_utils}, \hyperpage{6}
+  \item \spxentry{read\_pdf\_pdfminer()}\spxextra{in module pdf\_utils}, \hyperpage{6}
+  \item \spxentry{read\_pdf\_pypdf()}\spxextra{in module pdf\_utils}, \hyperpage{7}
+  \item \spxentry{read\_report()}\spxextra{in module toml\_report\_utils}, \hyperpage{10}
+  \item \spxentry{read\_report\_tomlkit()}\spxextra{in module toml\_report\_utils}, \hyperpage{10}
+  \item \spxentry{reference\_analysis}
+    \subitem \spxentry{module}, \hyperpage{7}
+  \item \spxentry{reference\_analysis\_aggregation}
+    \subitem \spxentry{module}, \hyperpage{9}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{setup\_logger()}\spxextra{in module logging\_utils}, \hyperpage{6}
+  \item \spxentry{substitute\_patterns()}\spxextra{in module general\_utils}, \hyperpage{4}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{toml\_report\_utils}
+    \subitem \spxentry{module}, \hyperpage{10}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{value\_count\_aggregation()}\spxextra{in module reference\_analysis\_aggregation}, 
+		\hyperpage{10}
+  \item \spxentry{vector\_database}
+    \subitem \spxentry{module}, \hyperpage{11}
+  \item \spxentry{VectorDatabase}\spxextra{class in vector\_database}, \hyperpage{11}
+
+  \indexspace
+  \bigletter W
+  \item \spxentry{write\_report\_tomlkit()}\spxextra{in module toml\_report\_utils}, \hyperpage{11}
+
+\end{sphinxtheindex}

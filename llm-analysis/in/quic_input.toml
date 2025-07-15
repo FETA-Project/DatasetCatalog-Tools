@@ -1,0 +1,7 @@
+# comment
+# dataset_title comment
+dataset_title = "CESNET-QUIC22"
+# paper_title comment
+paper_title = "CESNET-QUIC22: A large one-month QUIC network traffic dataset from backbone lines"
+# doi comment
+doi = "https://doi.org/10.1016/j.dib.2023.108888"

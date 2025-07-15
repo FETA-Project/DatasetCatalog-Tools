@@ -1,0 +1,318 @@
+global_system_prompt = """You are a researcher in computer science and you analyze scientific papers and datasets.
+    You answer only the truth, based on the facts from the given text.
+    You are focused on quality and properties of datasets."""
+#global_system_prompt = """Some global system prompt."""
+use_vector_database = true
+global_vector_db_chunk_size = 500
+global_vector_db_chunk_overlap = 0
+
+[[prompts]]
+field_name = "dataset_title"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+What is the title of the dataset?
+Include only the dataset title in your response.
+### Example:
+CESNET-QUIC22
+"""
+response_type = "string"
+search_method = "regex"
+# for context search in vector database
+vector_db_search_query = "dataset IEEE-TLS-19"
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 0
+chars_after = 2000
+[[prompts.keywords]]
+keyword = ""
+
+
+[[prompts]]
+field_name = "data_collection_year"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+What year were the data collected?
+Include only the year in your response.
+### Example:
+2022
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = "Data were collected in 2019."
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = "collected in"
+[[prompts.keywords]]
+keyword = "dataset"
+[[prompts.keywords]]
+keyword = "information"
+[[prompts.keywords]]
+keyword = "abstract"
+[[prompts.keywords]]
+keyword = "a b s t r a c t"
+
+
+[[prompts]]
+field_name = "description"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+Write a description of the dataset on 5 sentences from information included in the paper.
+Focus on the network dataset in question.
+### Example:
+TLS capture from CESNET2 backbone network over one year. The capture was done using high-speed monitoring probes at the perimeter of CESNET2 network. This dataset provides realistic characteristics of traffic originating from various web browsers, operating systems, mobile devices, desktop machines, and both HTTP/1.1 and HTTP/2 protocols.
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = "TLS capture from CESNET2 backbone network over one year. The capture was done using high-speed monitoring probes at the perimeter of CESNET2 network. This dataset provides realistic characteristics of traffic originating from various web browsers, operating systems, mobile devices, desktop machines, and both HTTP/1.1 and HTTP/2 protocols."
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = "abstract"
+[[prompts.keywords]]
+keyword = "a b s t r a c t"
+
+
+[[prompts]]
+field_name = "data_collection_tool"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+What tool was used to collect the dataset?
+Include only the name of the tool used.
+### Example:
+ipfixprobe
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = "We used ipfixprobe for data collection."
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = ""
+#[[prompts.keywords]]
+#keyword = "collected using"
+#[[prompts.keywords]]
+#keyword = "collected"
+#[[prompts.keywords]]
+#keyword = "recorded"
+#[[prompts.keywords]]
+#keyword = "using"
+#[[prompts.keywords]]
+#keyword = "abstract"
+#[[prompts.keywords]]
+#keyword = "a b s t r a c t"
+
+[[prompts]]
+field_name = "data_extraction_tool"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+What feature extraction tool was used for the dataset?
+If no tool was used, then reply "unknown".
+Include only the name of the tool used.
+Example:
+ipfixprobe PSTATS, TLS
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = "For feature extraction we used ipfixprobe and PSTATS."
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = ""
+#[[prompts.keywords]]
+#keyword = "cextracted using"
+#[[prompts.keywords]]
+#keyword = "extracted"
+#[[prompts.keywords]]
+#keyword = "extraction"
+#[[prompts.keywords]]
+#keyword = "abstract"
+#[[prompts.keywords]]
+#keyword = "a b s t r a c t"
+
+
+[[prompts]]
+field_name = "real_dataset"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+Is the dataset collected from real environment, or generated?
+Include only the response (yes or no).
+### Example:
+yes
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = "TLS capture from CESNET2 backbone network over one year. The capture was done using high-speed monitoring probes at the perimeter of CESNET2 network. This dataset provides realistic characteristics of traffic originating from various web browsers, operating systems, mobile devices, desktop machines, and both HTTP/1.1 and HTTP/2 protocols."
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = "collected"
+[[prompts.keywords]]
+keyword = "recorded"
+[[prompts.keywords]]
+keyword = "generated"
+[[prompts.keywords]]
+keyword = "abstract"
+[[prompts.keywords]]
+keyword = "a b s t r a c t"
+
+
+[[prompts]]
+field_name = "annotation"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+How were the data annotated, manually or automatically?
+### Example:
+Automatic based on SNI field from TLS header.
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = "Data were annotated automatically based on SNI field from TLS header. Data were annotated manually based on SNI field from TLS header."
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = ""
+#chars_before = 1000
+#chars_after = 5000
+#[[prompts.keywords]]
+#keyword = "annotated"
+#[[prompts.keywords]]
+#keyword = "annotation"
+#[[prompts.keywords]]
+#keyword = "annotate"
+#[[prompts.keywords]]
+#keyword = "abstract"
+#[[prompts.keywords]]
+#keyword = "a b s t r a c t"
+
+
+[[prompts]]
+field_name = "key_observations"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+Are there any key_observations the dataset?
+If you authors didn't mention any observations, respond "none".
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = """
+* Closed-world classification and evaluated trained classifiers on known classes
+* LightGBM achieved the best accuracy at 80.87%
+* When trained without handshake packets, multi-modal CNN improved to 87.96% accuracy
+* Performance degraded over time, with a significant drop between weeks 2 and 3 (e.g., LightGBM accuracy dropped from 87.34% to 77.89%), Data drift caused Google certificate changes affecting patterns
+* Models relying on handshake packets (first 8 packets) were more vulnerable to data drift
+"""
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = ""
+
+
+[[prompts]]
+field_name = "known_issues"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+Are there any known issues in the dataset?
+If you authors didn't mention any known issues, respond "none".
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = """* ML performance drop without retrainig mainly in March. This drop is caused due to change in the network monitoring infrastructure.
+* Several days missing"""
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+[[prompts.keywords]]
+keyword = ""
+# for context search using regex keywords
+#[[prompts.keywords]]
+#keyword = "issue"
+#[[prompts.keywords]]
+#keyword = "observation"
+#[[prompts.keywords]]
+#keyword = "abstract"
+#[[prompts.keywords]]
+#keyword = "observed"
+#[[prompts.keywords]]
+#keyword = "quality"
+#[[prompts.keywords]]
+#keyword = "abstract"
+#[[prompts.keywords]]
+#keyword = "a b s t r a c t"
+
+
+[[prompts]]
+field_name = "tags"
+system_prompt = ""
+prompt = """
+Provided paper describes dataset of recorded network data flow.
+What tags would you assign to this dataset?
+Include only comma separated tags in your response.
+"""
+response_type = "string"
+search_method = "vector"
+# for context search in vector database
+vector_db_search_query = "TLS capture from CESNET2 backbone network over one year. The capture was done using high-speed monitoring probes at the perimeter of CESNET2 network. This dataset provides realistic characteristics of traffic originating from various web browsers, operating systems, mobile devices, desktop machines, and both HTTP/1.1 and HTTP/2 protocols."
+vector_db_top_k = 2
+chunks_before = 2
+chunks_after = 2
+# for context search using regex keywords
+chars_before = 2000
+chars_after = 2000
+# for context search using regex keywords
+[[prompts.keywords]]
+keyword = "abstract"
+[[prompts.keywords]]
+keyword = "a b s t r a c t"
+
+
