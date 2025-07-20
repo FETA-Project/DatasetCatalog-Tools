@@ -1,4 +1,4 @@
-# LLM Analyser
+# LLM Analyzer
 This tools is used for research paper summarization for dataset quality analysis. 
 
 The output of this tool is a dataset report file mainly used for [Dataset Catalog](https://dataset-catalog.liberouter.org/).
