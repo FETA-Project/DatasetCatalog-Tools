@@ -6,3 +6,5 @@ Tools to run dataset analysis workflow
 
 For more details check each tool separately.
 
+# Acknowledgments
+This project was supported by the Ministry of the Interior of the Czech Republic, grant No. VJ02010024: Flow-Based Encrypted Traffic Analysis.
