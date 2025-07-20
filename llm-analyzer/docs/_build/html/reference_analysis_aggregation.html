@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>reference_analysis_aggregation module &#8212; DatasetAnalyzer 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="toml_report_utils module" href="toml_report_utils.html" />
+    <link rel="prev" title="reference_analysis module" href="reference_analysis.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-reference_analysis_aggregation">
+<span id="reference-analysis-aggregation-module"></span><h1>reference_analysis_aggregation module<a class="headerlink" href="#module-reference_analysis_aggregation" title="Link to this heading">¶</a></h1>
+<p>Module handles aggregation of analyses from referencing papers.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="reference_analysis_aggregation.aggregate_reference_analysis">
+<span class="sig-prename descclassname"><span class="pre">reference_analysis_aggregation.</span></span><span class="sig-name descname"><span class="pre">aggregate_reference_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">per_paper_analysis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_prompts_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#reference_analysis_aggregation.aggregate_reference_analysis" title="Link to this definition">¶</a></dt>
+<dd><p>Aggregates responses from corresponding fields from all referencing papers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>per_paper_analysis</strong> (<em>dict</em>) – Dictionary with structured analyses of referencing papers</p></li>
+<li><p><strong>reference_prompts_file_name</strong> (<em>str</em>) – File name of reference analysis prompts config file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Aggregated structured analysis of referencing papers as dictionary</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="reference_analysis_aggregation.concatenate_field">
+<span class="sig-prename descclassname"><span class="pre">reference_analysis_aggregation.</span></span><span class="sig-name descname"><span class="pre">concatenate_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyses_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatenation_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#reference_analysis_aggregation.concatenate_field" title="Link to this definition">¶</a></dt>
+<dd><p>Concatenates responses from given field from all referencing papers while adding paper headers to each record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analyses_list</strong> (<em>dict</em>) – List of referencing paper analyses</p></li>
+<li><p><strong>field_name</strong> (<em>str</em>) – Name of the field which will be concatenated</p></li>
+<li><p><strong>default_value</strong> (<em>str</em>) – Default value of the field which is present if analyzed dataset was not referenced</p></li>
+<li><p><strong>skip_default</strong> (<em>int</em>) – Whether to skip papers with default values</p></li>
+<li><p><strong>concatenation_format</strong> (<em>str</em>) – Format of each paper record including header and response placement</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Aggregated responses as string</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="reference_analysis_aggregation.value_count_aggregation">
+<span class="sig-prename descclassname"><span class="pre">reference_analysis_aggregation.</span></span><span class="sig-name descname"><span class="pre">value_count_aggregation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyses_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#reference_analysis_aggregation.value_count_aggregation" title="Link to this definition">¶</a></dt>
+<dd><p>Counts responses from given field from all referencing papers and lists all unique values and their counts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analyses_list</strong> (<em>list</em>) – List of referencing paper analyses</p></li>
+<li><p><strong>field_name</strong> (<em>str</em>) – Name of the field which will be aggregated</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Aggregated response as string</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">DatasetAnalyzer</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="direct_analysis.html">direct_analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_utils.html">general_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interval_blacklist.html">interval_blacklist module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="llm_utils.html">llm_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging_utils.html">logging_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdf_utils.html">pdf_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference_analysis.html">reference_analysis module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">reference_analysis_aggregation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toml_report_utils.html">toml_report_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_database.html">vector_database module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">src</a><ul>
+      <li>Previous: <a href="reference_analysis.html" title="previous chapter">reference_analysis module</a></li>
+      <li>Next: <a href="toml_report_utils.html" title="next chapter">toml_report_utils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Samuel Harčár.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/reference_analysis_aggregation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

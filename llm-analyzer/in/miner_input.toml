@@ -1,0 +1,8 @@
+# comment 1
+# comment 2
+dataset_title = "CESNET-MINER22"
+# comment 3
+paper_title = "DeCrypto: Finding cryptocurrency miners on ISP networks"
+# comment 4
+doi = "https://doi.org/10.1007/978-3-031-22295-5_8"
+

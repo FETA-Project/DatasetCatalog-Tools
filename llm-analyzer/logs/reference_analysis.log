@@ -1,0 +1,12 @@
+[2025-07-15 21:30:19,306:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field dataset_application
+[2025-07-15 21:30:26,191:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field key_observations
+[2025-07-15 21:30:32,445:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field known_issues
+[2025-07-15 21:30:37,313:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field sentiment
+[2025-07-15 21:31:04,736:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field dataset_application
+[2025-07-15 21:31:23,479:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field key_observations
+[2025-07-15 21:31:37,114:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field known_issues
+[2025-07-15 21:31:50,938:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field sentiment
+[2025-07-15 21:32:19,464:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field dataset_application
+[2025-07-15 21:32:36,602:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field key_observations
+[2025-07-15 21:32:55,730:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field known_issues
+[2025-07-15 21:33:09,210:     INFO:reference_analysis.py:285 -    analyze_reference()] analyzing field sentiment

@@ -1,0 +1,3 @@
+dataset_title = "CESNET-TimeSeries24"
+paper_title = "CESNET-TimeSeries24: Time Series Dataset for Network raffic Anomaly Detection and Forecasting"
+doi = "https://doi.org/10.1038/s41597-025-04603-x"
