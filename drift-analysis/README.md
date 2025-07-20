@@ -1,4 +1,4 @@
-# Drift Analyser
+# Drift Analyzer
 This tools provides dataset stability analysis that is based on drift detection method Model-based Feature Weight Drift Detection (MFWDD). The dataset stability is evaluated based on worflow used in "experiment_runner.py". The analysis is segmented in these catagories: 
 * Global: Full dataset drift detection regardless label column
 * Per Class: Per class drift detection (requires fully labeled dataset)
