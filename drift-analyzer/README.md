@@ -24,6 +24,7 @@ Edit mainly experiment_runner.py where specification of experiment parameters ca
 
 ## Details
 In this section, we provide more details about the customized drift detection and analysis workflow. In the picture below, you can see the high-level architecture of the Drift Analyzer module.
+
 ![Detector infrastructure](./img/detector_infrastructure.png)
 
 The following example describes how to use the drift detector to perform one
