@@ -464,6 +464,7 @@ class Association(AbstractMetric):
         del self.X1 
         del self.y1 
         del self.raw_dataset
+        del self.datasetsP
         
         try:
             with open(outputdir + "/metric2.obj", "wb") as f:
