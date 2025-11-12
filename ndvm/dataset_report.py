@@ -303,6 +303,8 @@ class dataset_metrics:
                 "annotation":""
             },
             "generic_info":{
+                "capture_dates_info": "When was the dataset captured/generated",
+                "capture_dates": "n/a",
                 "classes": str(self.classes), 
                 "features": str(self.features), 
                 "f1-score_info":"F1-score calculated based on NDVM tool [https://github.com/soukudom/NDVM]", 
@@ -315,7 +317,7 @@ class dataset_metrics:
                 "known_issues_info": """Description of indentified issues in the dataset""",
                 "known_issues": """ """,
                 "key_observations_info": "List of known errors, drifts, limits, ... of the dataset",
-                "key_observations": """ * """+insights,
+                "key_observations": """ *"""+insights,
                 "dataset_organization_info":"Structure of the dataset. E.g., per day, per capture, per device", 
                 "dataset_organization":"", 
                 "dataset_organization_description_info": "Description of the content of the organization. Is there any metadata?",
